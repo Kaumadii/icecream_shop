@@ -12,10 +12,17 @@ use Illuminate\Notifications\Notifiable;
 
 #[Fillable(['name', 'email', 'password'])]
 #[Hidden(['password', 'remember_token'])]
+
+
 class User extends Authenticatable
 {
     /** @use HasFactory<UserFactory> */
     use HasFactory, Notifiable;
+    protected $fillable = ['name', 'email', 'password', 'role'];
+
+public const ROLE_OWNER = 'owner';
+public const ROLE_MANAGER = 'manager';
+public const ROLE_CASHIER = 'cashier';
 
     /**
      * Get the attributes that should be cast.
@@ -29,4 +36,6 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    
 }
