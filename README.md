@@ -22,18 +22,3 @@ PHP 8.2+, Composer, MySQL
 | Owner   | owner@icecream.test    |
 | Manager | manager@icecream.test  |
 | Cashier | cashier@icecream.test  |
-
-## Permissions
-(table from Step 8)
-
-## Endpoints
-(list of endpoints + example request/response; note `Accept: application/json` header)
-
-## Running tests
-php artisan test
-
-## ER Diagram
-(paste the mermaid block, and link docs/er-diagram.png)
-
-## Postman
-Import docs/postman/IceCreamShop.postman_collection.json
